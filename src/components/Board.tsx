@@ -1,12 +1,12 @@
-import React from 'react';
-import { Flex } from './common/Flex';
-import { Grid } from './common/Grid';
+import { Button, Flex, Grid, Text } from './common';
 import Sqaure from './Sqaure';
 
 export default function Board() {
   return (
-    <Flex direction='column' gap='20px'>
-      <span>Next Player: x</span>
+    <Flex direction='column' gap='20px' align='center'>
+      <Text fontSize='24px' fontWeight='600' lineHeight='24px'>
+        Next Player: x
+      </Text>
       <Grid
         width='100%'
         height='100%'
@@ -16,6 +16,13 @@ export default function Board() {
           <Sqaure key={squareNumber} squareNumber={squareNumber} />
         ))}
       </Grid>
+      <Button
+        width='fit-content'
+        padding='10px'
+        border='1px solid black'
+        borderRadius='10px'>
+        초기화
+      </Button>
     </Flex>
   );
 }

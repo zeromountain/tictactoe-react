@@ -22,6 +22,7 @@ type GridProps = {
   background?: string;
   width?: string;
   height?: string;
+  margin?: string;
 };
 
 export const Grid = styled.div((props: GridProps) => ({
@@ -47,4 +48,5 @@ export const Grid = styled.div((props: GridProps) => ({
   backgroundColor: props.background || 'transparent',
   width: props.width || 'auto',
   height: props.height || 'auto',
+  margin: props.margin || '0',
 }));
